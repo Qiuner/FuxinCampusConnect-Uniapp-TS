@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    // 修复：替换弃用的选项
+    "verbatimModuleSyntax": true,
+    // 新增：消除弃用警告
+    "ignoreDeprecations": "5.0",
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"],
+    "allowJs": true,
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "vueCompilerOptions": {
+    // experimentalRuntimeMode 已废弃，现调整为 nativeTags，请升级 Volar 插件至最新版本
+    "nativeTags": ["block", "component", "template", "slot"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
+

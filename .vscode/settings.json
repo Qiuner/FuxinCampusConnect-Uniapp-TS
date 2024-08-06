@@ -1,0 +1,106 @@
+{
+  // Editor
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": "active",
+  "editor.tabSize": 2,
+  "terminal.integrated.fontSize": 16,
+  "editor.fontFamily": "'FiraCode Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.hover.sticky": true,
+  "explorer.confirmDelete": false,
+  "editor.formatOnPaste": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.eol": "\r\n",
+  "files.simpleDialog.enable": true,
+
+  // 保存时格式化
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.prettier": "always"
+  },
+
+  "eslint.useFlatConfig": true,
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "styles/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ],
+
+  // 文件格式化配置
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 配置语言的文件关联
+  "files.associations": {
+    "pages.json": "jsonc", // pages.json 可以写注释
+    "manifest.json": "jsonc" // manifest.json 可以写注释
+  },
+
+  // 隐藏文件，净化工作区可见文件
+  "files.exclude": {
+    // "**/.git": true,
+    // "**/.svn": true,
+    // "**/.hg": true,
+    // "**/CVS": true,
+    // "**/.DS_Store": true,
+    // "**/Thumbs.db": true,
+    // ".vite-cache": true,
+    // ".npmrc": true,
+    // ".stylelintignore": true,
+    // "package-lock.json": true,
+    // "config/vite.config.js.*": true,
+    // "src/vite-env.d.ts": true,
+    // "shims-uni.d.ts": true,
+    // "**/shime-uni.d.ts": true,
+    // "**/env.d.ts": true,
+    // "vite.config.ts.timestamp-*": true,
+    // "pnpm-lock.yaml": true
+  },
+
+  // 搜索时，排除文件
+  "search.exclude": {
+    "**/dist": true,
+    "**/public": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/auto-imports.d.ts": true,
+    "config/vite.config.js.*": true,
+    "**/components.d.ts": true,
+    "**/node_modules": true,
+    "**/Thumbs.db": true,
+    ".vite-cache": true,
+    ".eslintignore": true,
+    ".stylelintignore": true,
+    ".prettierignore": true,
+    "package-lock.json": true,
+    ".editorconfig": true,
+    ".gitignore": true
+  }
+}
